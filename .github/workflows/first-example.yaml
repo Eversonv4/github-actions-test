@@ -8,10 +8,15 @@ jobs:
   run-shell-commands:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
       - name: Hello World
         run: echo "Olá, pessoal. Teste executado pelo Github Actions"
+
       - name: Get Currect Directory
         # run: ruby test.rb
         run: pwd
+
       - name: List all files in current dir
-        run: ls -la
+        run: ls
