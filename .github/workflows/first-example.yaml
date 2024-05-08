@@ -14,8 +14,20 @@ jobs:
       - name: Hello World
         run: echo "Olá, pessoal. Teste executado pelo Github Actions"
 
-      - name: Get Currect Directory
+      - name: Running Ruby script
         run: ruby test.rb
 
       - name: List all files in current dir
         run: ls
+
+      - name: Dependency Versions
+        run: node --version
+
+      - run: composer --version
+      - run: php --version
+      - run: node --version
+      - run: python --version
+      - run: npm --version
+      - run: ruby --version
+      - run: docker --version
+      - run: docker-compose --version
