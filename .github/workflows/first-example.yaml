@@ -15,8 +15,7 @@ jobs:
         run: echo "Olá, pessoal. Teste executado pelo Github Actions"
 
       - name: Get Currect Directory
-        # run: ruby test.rb
-        run: pwd
+        run: ruby test.rb
 
       - name: List all files in current dir
         run: ls
