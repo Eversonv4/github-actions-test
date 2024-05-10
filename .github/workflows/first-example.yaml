@@ -1,33 +1,33 @@
-# name: first-workflow
-# run-name: Primeiro Workflow
+name: first-workflow
+run-name: Primeiro Workflow
 
-# on:
-#   - push
+on:
+  - push
 
-# jobs:
-#   run-shell-commands:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Checkout
-#         uses: actions/checkout@v4
+jobs:
+  run-shell-commands:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
 
-#       - name: Hello World
-#         run: echo "Olá, pessoal. Teste executado pelo Github Actions"
+      - name: Hello World
+        run: echo "Olá, pessoal. Teste executado pelo Github Actions"
 
-#       - name: Running Ruby script
-#         run: ruby test.rb
+      - name: Running Ruby script
+        run: ruby test.rb
 
-#       - name: List all files in current dir
-#         run: ls
+      - name: List all files in current dir
+        run: ls
 
-#       - name: Dependency Versions
-#         run: node --version
+      - name: Dependency Versions
+        run: node --version
 
-#       - run: composer --version
-#       - run: php --version
-#       - run: node --version
-#       - run: python --version
-#       - run: npm --version
-#       - run: ruby --version
-#       - run: docker --version
-#       - run: docker-compose --version
+      - run: composer --version
+      - run: php --version
+      - run: node --version
+      - run: python --version
+      - run: npm --version
+      - run: ruby --version
+      - run: docker --version
+      - run: docker-compose --version
