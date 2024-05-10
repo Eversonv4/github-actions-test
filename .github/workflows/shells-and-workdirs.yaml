@@ -3,15 +3,33 @@ run-name: Shells e Diretorios de trabalho
 
 on:
   - push
+# doc: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#defaultsrunshell
+
+# alterando o shell default a nível global
+# defaults:
+#   run:
+#     shell: cmd
 
 jobs:
   display-workdir-info:
+    # alterando o shell default a nível de job
+    # defaults:
+    #   run:
+    #     shell: cmd
     runs-on: ubuntu-latest
     steps:
       - name: Display workdir and list files
+        # altando o shell a nível de step
+        # shell: cmd
         run: |
           pwd
           ls -la
           echo $GITHUB_SHA
           echo $GITHUB_REPOSITORY
           echo $GITHUB_WORKSPACE
+
+      - name: Python Shell
+        shell: python
+        run: |
+          import platform
+          print(platform.processor())
