@@ -2,9 +2,16 @@
 name: issues-events
 run-name: Issues Event
 
-# Adicionando eventos para branches específicas
+# Adicionando eventos ao criar uma issue
+# on:
+#   - issues
+
+# Executa workflow quando uma issue é aberta, apenas
 on:
-  - issues
+  issues:
+    types:
+      - opened
+
 
 jobs:
   show-ref-and-sha:
