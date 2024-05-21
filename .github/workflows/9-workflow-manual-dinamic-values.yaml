@@ -1,0 +1,17 @@
+name: manual-workflow-dinamic-values
+run-name: Manual Workflow With Dinamic Values
+
+on:
+  workflow_dispatch:
+    inputs:
+      message:
+        description: Messagem a ser exibida no terminal
+        type: string
+        required: true
+        default: Olá mundo!
+
+jobs:
+  show-message:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ inputs.message }}
